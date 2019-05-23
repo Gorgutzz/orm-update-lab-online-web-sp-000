@@ -47,6 +47,10 @@ class Student
     student = Student.new(name, grade).tap{ |x| x.save }
   end
 
+  def self.new_from_db(row)
+    self.new(row[1], row[2], row[0])
+  end
+
 
 
 
