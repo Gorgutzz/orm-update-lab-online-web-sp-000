@@ -37,11 +37,13 @@ class Student
         INSERT INTO sutdents(name, grade)
         VALUES(?, ?)
         SQL
-      DB[:conn].execute(sql, self.nae, self.grade)
+      DB[:conn].execute(sql, self.name, self.grade)
 
       @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
     end
   end
+
+
 
 
   # Remember, you can access your database connection anywhere in this class
