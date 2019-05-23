@@ -29,6 +29,12 @@ class Student
   def save
     if self.id
       self.update
+    else
+      sql = <<-SQL
+        INSERT INTO sutdents(name, grade)
+        VALUES(?, ?)
+        SQL
+      DB[:conn].execute(sql, self.nae, self.grade)
     end
 
 
