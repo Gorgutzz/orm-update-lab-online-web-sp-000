@@ -16,8 +16,8 @@ class Student
       grade INTEGER
     )
     SQL
-  DB[:conn].execute(sql)
-end
+    DB[:conn].execute(sql)
+  end
 
   def save
     if self.id
