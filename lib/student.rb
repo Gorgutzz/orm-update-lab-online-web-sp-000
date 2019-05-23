@@ -8,6 +8,10 @@ class Student
     @id = id
   end
 
+  def save
+    if self.id
+      self.update
+    end
 
 
   # Remember, you can access your database connection anywhere in this class
